@@ -1,0 +1,39 @@
+.ball_red,.ball_blue{
+    color: white;
+    width: 20px;
+    height: 20px;
+    margin-left: 1px;
+    font-size: 15px;
+}
+ul {
+    list-style-type:none; 
+    margin: 0;
+    padding: 0;
+}
+.ball_red{
+    background-color: rgb(224, 121, 121);
+}
+.ball_blue{
+    background-color: rgb(158, 148, 245);
+}
+.issue_number{
+    width: 50px;
+    height: 20px;
+}
+.issue_blue_null{
+    width: 20px;
+}
+.issue_dlt{
+    display: flex;
+    flex-direction: row;
+    user-select:none;
+}
+.issue_red{
+    display: flex;
+    flex-direction: row;
+}
+.issue_blue{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5px;
+}
