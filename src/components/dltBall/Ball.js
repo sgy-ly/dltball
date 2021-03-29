@@ -1,5 +1,20 @@
 
+import style from "./Ball.module.css"
 
-class Ball extends React.Component{
-
+function Ball(props){
+ return (
+    <div className={style.ball}></div>  
+ );
 }
+class Ball extends React.Component{
+   constructor(props){
+      super(props)
+   }
+   render(){
+      return (
+         <div></div>
+      );
+   }
+}
+
+export default Ball;
