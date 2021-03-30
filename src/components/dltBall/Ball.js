@@ -1,20 +1,31 @@
 
 import style from "./Ball.module.css"
 
-function Ball(props){
- return (
-    <div className={style.ball}></div>  
- );
-}
-class Ball extends React.Component{
-   constructor(props){
-      super(props)
-   }
-   render(){
-      return (
-         <div></div>
-      );
-   }
+function BallRed(props) {
+   return (
+      <div className={[style.ball,style["ball_red"]].join(" ")}>{props.value}</div>
+   );
 }
 
-export default Ball;
+function BallBlue(props) {
+   return (
+      <div className={[style.ball,style["ball_blue"]].join(' ')}>{props.value}</div>
+   );
+}
+
+function BallBlank(props) {
+   return (
+      <div className={[style.ball, style["ball_black"]].join(" ")}>{props.value}</div>
+   );
+}
+function BallTitle(props) {
+   return (
+      <div className={[style.ball, style["ball_title"]].join(' ')}>{props.issueNo}</div>
+   );
+}
+export {
+   BallRed,
+   BallBlue,
+   BallBlank,
+   BallTitle
+};

@@ -16,8 +16,8 @@ class IssueRed extends React.Component{
         let redArry=[];
         for (let i = 0; i < 36; i++) {
             let cname="ball_red";
-            if(i==0){cname="issue_number"}
-            let redItem=<div className={cname}>{i==0?"":i}</div>;
+            if(i===0){cname="issue_number"}
+            let redItem=<div className={cname}>{i===0?"":i}</div>;
             redArry.push(redItem);
         }
         return redArry;
@@ -36,7 +36,7 @@ class IssueBlue extends React.Component{
         for (let i = 0; i < 13; i++) {
             let cname="ball_blue";
             if(i==0){cname="issue_blue_null"}
-            let redItem=<div className={cname}>{i==0?"":i}</div>;
+            let redItem=<div className={cname}>{i===0?"":i}</div>;
             redArry.push(redItem);
         }
         return redArry;
