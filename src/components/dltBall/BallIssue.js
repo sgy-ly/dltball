@@ -1,29 +1,31 @@
-import {BallRed,BallBlue,BallTitle,BallBlank} from "./Ball";
+import {BallTitle,BallBlank,BallColor,BALL_COLOR_MENU} from "./Ball";
 import React from "react";
 import style from "./BallIssue.module.css";
 
 function BallIssue(props){
-    // console.log(props.dltIssue);
     return (
         <div className={style["ball_issue"]}>
             <BallTitle issueNo={props.dltIssueNo}></BallTitle>
-            <BallIssueRed issueRed={props.dltIssue.r}></BallIssueRed>
+            <BallIssueRed issueRed={props.dltIssue?props.dltIssue.r:null} ></BallIssueRed >
             <BallBlank></BallBlank>
-            <BallIssueBlue issueRed={props.dltIssue.b}></BallIssueBlue>
-            <div className={style["issue_time"]}>{props.dltIssue.time}</div>
+            <BallIssueBlue issueBlue={props.dltIssue?props.dltIssue.b:null}></BallIssueBlue>
+            <div className={style["issue_time"]}>{props.dltIssue?props.dltIssue.time:null}</div>
         </div>
     );
 }
 
 class BallIssueRed extends React.Component{
-    drowBall(props){
+    drowBall(){
         let redArry=[];
         let index=0
         for (let i = 1; i < 36; i++) {
-            if(props.issueRed[index]===i){
-
+            let item;
+            let ballColor=BALL_COLOR_MENU.BALL_RED;
+            if(this.props.issueRed && this.props.issueRed[index]==i){
+                index++;
+                ballColor=BALL_COLOR_MENU.BALL_RED_SELECT;
             }
-            let item=<BallRed key={"ballred-"+i} value={i}></BallRed>
+            item=<BallColor  value={i} ballColor={ballColor} selectBallColor={BALL_COLOR_MENU.BALL_RED_SELECT}></BallColor>
             redArry.push(item);
         }
         return redArry;
@@ -36,10 +38,17 @@ class BallIssueRed extends React.Component{
 }
 
 class BallIssueBlue extends React.Component{
-    drowBall(props){
+    drowBall(){
         let redArry=[];
+        let index=0
         for (let i = 1; i < 13; i++) {
-            let item=<BallBlue key={"ballred-"+i} value={i}></BallBlue>
+            let item;
+            let ballColor=BALL_COLOR_MENU.BALL_BLUE;
+            if(this.props.issueBlue && this.props.issueBlue[index]==i){
+                index++;
+                ballColor=BALL_COLOR_MENU.BALL_BLUE_SELECT;
+            }
+            item=<BallColor  value={i} ballColor={ballColor} selectBallColor={BALL_COLOR_MENU.BALL_BLUE_SELECT}></BallColor>
             redArry.push(item);
         }
         return redArry;

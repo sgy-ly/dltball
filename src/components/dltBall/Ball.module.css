@@ -1,5 +1,4 @@
 .ball{
-    /* background-color: rgb(252, 201, 192); */
     color: white;
     width: 22px;
     height: 22px;
@@ -8,10 +7,20 @@
     font-size: 15px;
 }
 .ball_red{
-    background-color: rgb(252, 201, 192);
+    background-color: rgb(255,208,200);
+}
+.ball_red_select{
+    background-color: rgb(255, 68, 35);
 }
 .ball_blue{
-    background-color: rgb(182, 174, 255);
+    background-color: rgb(211,206,255);
+}
+.ball_blue_select{
+    background-color: rgb(61, 40, 255);
+}
+
+.ball_click_select{
+    background-color: rgb(26, 231, 43);
 }
 .ball_black{
     background-color: white;

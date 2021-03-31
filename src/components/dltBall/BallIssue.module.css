@@ -2,6 +2,7 @@
     display:flex;
     /* background-color: rgb(41, 247, 22); */
     flex-direction: row;
+    user-select:none;
 }
 
 /* .issue{

@@ -13,6 +13,11 @@ function BallIssueAll(){
     return (
           <div>
             {dltlistItem}
+            <BallIssue></BallIssue>
+            <BallIssue></BallIssue>
+            <BallIssue></BallIssue>
+            <BallIssue></BallIssue>
+            <BallIssue></BallIssue>
           </div>
       );
 }

@@ -5,7 +5,7 @@ function getDltIssueObj() {
     var returnObj = {};
     for (let i = strnumArr.length - 1; i >= 0; i--) {
         var itemArry = strnumArr[i].split("|");
-        if (itemArry[0] < 19001) {
+        if (itemArry[0] < 20001) {
             continue;
         }
         returnObj[itemArry[0]] = {};
@@ -17,7 +17,9 @@ function getDltIssueObj() {
 }
 
 function DltIssueAllDate() {
-    return `21034|08|10|14|25|34|07|08|2021-03-29
+    // 
+    return `21035|05|11|16|30|32|03|04|2021-03-31
+21034|08|10|14|25|34|07|08|2021-03-29
 21033|01|03|05|30|32|01|05|2021-03-27
 21032|01|11|14|34|35|07|10|2021-03-24
 21031|01|04|19|20|34|03|05|2021-03-22
