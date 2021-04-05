@@ -1,17 +1,8 @@
 .ball_issue{
     display:flex;
-    /* background-color: rgb(41, 247, 22); */
     flex-direction: row;
     user-select:none;
 }
-
-/* .issue{
-    display:flex;
-    background-color: teal;
-    margin: 20px;
-    padding: 20px;
-    flex-direction: row;
-} */
 
 .issue_time{
     background-color: rgb(202 172 127);
